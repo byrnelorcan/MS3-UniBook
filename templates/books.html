@@ -7,6 +7,12 @@
     <title>UniBook</title>
 </head>
 <body>
-    
+    {% for book in books %}
+        {{ book.book_name }}<br>
+        {{ book.sub_topic }}<br>
+        {{ book.book_author }}<br>
+        {{ book.book_description }}<br>
+        <a href="{{ book.book_link }}"></a>{{ book.book_link }}<br>
+    {% endfor %}
 </body>
 </html>
