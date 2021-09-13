@@ -1,0 +1,7 @@
+.flashes {
+    background-color: yellow;
+    text-align: center;
+    line-height: 2;
+    overflow: hidden; 
+    margin: 0;
+}

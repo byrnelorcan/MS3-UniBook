@@ -6,9 +6,13 @@
 <div class="row">
     <div class="col s12 m8 offset-m2">
       <div class="card-panel">
+        {% for detail in details %}
+        
         <h2>
-            {{ username }}'s Profile
+            Welcome {{ detail.username }}! <br>
         </h2>
+        
+        {% endfor %}
       </div>
     </div>
   </div>

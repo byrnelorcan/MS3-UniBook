@@ -48,29 +48,18 @@
                 {% endif %}
           </ul>
     </header>
-    <!-- SEARCHBAR -->
-    <div class="teal lighten-5">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="fa fa-search">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
+
+    
 
 <section>
     <!-- flash up messages -->
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                    <div id="modal1" class="modal flashes">
-                        <div class="modal-content">
-                          <h4>{{ message }}</h4>
-                        </div>
-                        <div class="modal-footer">
-                          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                        </div>
+                    <div class="row flashes">
+                      <h5 class="col s12 light-orange">
+                        {{ message }}
+                      </h5>
                     </div>
             {% endfor %}
         {% endif %}
