@@ -2,11 +2,26 @@
 {% block content %}
 
 <div class="row">
-    <form class="col s12 m8 offset-m2">
-      <div class="card-panel teal">
-        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </span>
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+      <div class="card-panel teal lighten-5">
+        <div class="row">
+            <div class="input-field col s12">
+              <i class="fas fa-user-plus prefix text-darken"></i>
+              <input id="username" name="username" type="text" class="validate">
+              <label for="username">Username</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="fas fa-user-lock prefix text-darken"></i>
+                <input id="password" name="password" type="password" class="validate">
+                <label for="password">Password</label>
+                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+              </div> 
+          </div>
+          <div class="row">
+            <button class="btn-large waves-effect waves-light col s12" type="submit" name="action">Register
+                <i class="fas fa-paper-plane"></i>
+              </button>
+          </div>
       </div>
     </form>
   </div>
