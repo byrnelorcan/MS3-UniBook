@@ -11,6 +11,13 @@
         <h2>
             Welcome {{ detail.username }}! <br>
         </h2>
+        <h4>
+            {{ detail.firstname }} {{ detail.lastname }}
+        </h4>
+        <h5>
+            <p><strong>Course of study:</strong> {{ detail.course }}</p>
+            <p><strong>University:</strong> {{ detail.university }}</p>
+        </h5>
         
         {% endfor %}
       </div>
