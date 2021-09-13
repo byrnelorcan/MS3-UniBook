@@ -1,14 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2>
+    <span>Lets get started!</span>
+</h2>
+
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
       <div class="card-panel teal lighten-5">
         <div class="row">
+            <div class="input-field col s6">
+                <i class="fas fa-user prefix"></i>
+                <input id="firstname" name="firstname" type="text" class="validate">
+                <label for="firstname">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="lastname" name="lastname" type="text" class="validate">
+                <label for="lastname">Last Name</label>
+            </div>
             <div class="input-field col s12">
-              <i class="fas fa-user-plus prefix text-darken"></i>
-              <input id="username" name="username" type="text" class="validate">
-              <label for="username">Username</label>
+                <i class="fas fa-user-graduate prefix text-darken"></i>
+                <select>
+                  <option value="" disabled selected>Choose your University course!</option>
+                  <option value="1">Science</option>
+                  <option value="2">Engineering and Tech</option>
+                  <option value="3">Law</option>
+                  <option value="4">Medicine</option>
+                  <option value="5">Arts</option>
+                  <option value="6">Other</option>
+                </select>
+            </div>
+            <div class="input-field col s12">
+                <i class="fas fa-university prefix text-darken"></i>
+                <input id="university" name="university" type="text" class="validate">
+                <label for="university">Your University</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="fas fa-user-plus prefix text-darken"></i>
+                <input id="username" name="username" type="text" class="validate">
+                <label for="username">Username</label>
             </div>
             <div class="input-field col s12">
                 <i class="fas fa-user-lock prefix text-darken"></i>
@@ -21,6 +51,11 @@
             <button class="btn-large waves-effect waves-light col s12" type="submit" name="action">Register
                 <i class="fas fa-paper-plane"></i>
               </button>
+          </div>
+          <div class="row">
+              <span>
+                  Already a member? Awesome! Log in <a href="">here!</a>
+              </span>
           </div>
       </div>
     </form>
