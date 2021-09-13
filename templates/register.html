@@ -11,11 +11,13 @@
         <div class="row">
             <div class="input-field col s6">
                 <i class="fas fa-user prefix"></i>
-                <input id="firstname" name="firstname" type="text" class="validate">
+                <input id="firstname" name="firstname" type="text" class="validate"
+                minlength="2" maxlength="10" pattern="^[a-zA-Z]{2,10}$" required>
                 <label for="firstname">First Name</label>
             </div>
             <div class="input-field col s6">
-                <input id="lastname" name="lastname" type="text" class="validate">
+                <input id="lastname" name="lastname" type="text" class="validate"
+                minlength="2" maxlength="15" pattern="^[a-zA-Z]{2,15}$" required>
                 <label for="lastname">Last Name</label>
             </div>
             <div class="input-field col s12">
@@ -37,12 +39,14 @@
             </div>
             <div class="input-field col s12">
                 <i class="fas fa-user-plus prefix text-darken"></i>
-                <input id="username" name="username" type="text" class="validate">
+                <input id="username" name="username" type="text" class="validate"
+                minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                 <label for="username">Username</label>
             </div>
             <div class="input-field col s12">
                 <i class="fas fa-user-lock prefix text-darken"></i>
-                <input id="password" name="password" type="password" class="validate">
+                <input id="password" name="password" type="password" class="validate"
+                minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
                 <label for="password">Password</label>
                 <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
               </div> 
