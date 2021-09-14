@@ -21,16 +21,25 @@
               {{ book.book_name }}
             </h5>
           </div>
-          <div class="col s8">
+          <div class="col s9">
             {{ book.topic_name }}
           </div>
-          <div class="col s2">
-            {{ book.book_rating}}
+          <div class="col s3">
+            <p class="margin">{{ book.book_rating}} / 5</p>
+          </div>
+          <div class="col s9">
+            {{ book.sub_topic }}
+          </div>
+          <div class="col s3">
+            PDF Available!
           </div>
         </div>
       </div>
       <div class="collapsible-body">
-        <span>{{ book.book_description }}</span>
+        <span><strong>Author:</strong> {{ book.book_author }}</span><br>
+        <span><strong>Description:</strong><br> {{ book.book_description }}</span><br>
+        <span><strong>Find the book:</strong> <a href="{{ book.book_link }}">here!</a></span>
+        
       </div>
     </li>
     {% endfor %}

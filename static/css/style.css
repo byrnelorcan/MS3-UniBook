@@ -4,6 +4,7 @@
     line-height: 2;
     overflow: hidden; 
     margin: 0;
+    
 }
 
 /* http://jsfiddle.net/jstol/wZYty/ */
@@ -13,6 +14,7 @@
     height: 2em;
     width: 2em;
     text-align: center;
+    
 }
 
 .rating p {
@@ -30,5 +32,9 @@
 .books {
     margin: 0;
     width: 100%;
+}
+
+.margin {
+    margin: 0;
 }
 
