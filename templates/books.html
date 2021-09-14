@@ -10,24 +10,30 @@
       </div>
     </form>
   </div>
-  
-    {% for book in books %}
-        {{ book.book_name }}<br>
-        {{ book.sub_topic }}<br>
-        {{ book.book_author }}<br>
-        {{ book.book_description }}<br>
-        {{ book.book_link }}<br>
-    {% endfor %}
 
-    <ul class="collection">
-      <li class="collection-item avatar">
-        <img src="images/yuna.jpg" alt="" class="">
-        <span class="title">Title</span>
-        <p>First Line <br>
-           Second Line
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-    </ul>
+  <ul class="collapsible popout">
+    {% for book in books %}
+    <li>
+      <div class="collapsible-header">
+        <div class="row books">
+          <div class="col s12">
+            <h5>
+              {{ book.book_name }}
+            </h5>
+          </div>
+          <div class="col s8">
+            {{ book.topic_name }}
+          </div>
+          <div class="col s2">
+            {{ book.book_rating}}
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-body">
+        <span>{{ book.book_description }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 
 {% endblock %}
