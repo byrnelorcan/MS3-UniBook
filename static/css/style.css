@@ -38,3 +38,18 @@
     margin: 0;
 }
 
+/*-- https://stackoverflow.com/questions/15300059/css-how-to-make-image-container-width-fixed-and-height-auto-stretched --*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cover {
+    width: 200px;
+    min-height: 120px;
+    max-height: auto;
+    float: left;
+    margin: 3px;
+    padding: 3px;
+}
+
