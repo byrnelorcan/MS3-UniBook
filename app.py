@@ -112,6 +112,7 @@ def add_book():
             "book_rating": request.form.get("book_rating"),
             "is_pdf": is_pdf,
             "book_link": request.form.get("book_link"),
+            "book_image": request.form.get("book_image"),
             "created_by": session["user"]
         }
         mongo.db.tasks.insert_one(book)
