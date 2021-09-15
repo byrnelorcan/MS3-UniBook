@@ -102,7 +102,6 @@ def logout():
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
     if request.method == "POST":
-        is_pdf = "on" if request.form.get("is_pdf") else "off"
         book = {
             "topic_name": request.form.get("topic_name"),
             "sub_topic": request.form.get("sub_topic"),
@@ -110,14 +109,13 @@ def add_book():
             "book_author": request.form.get("book_author"),
             "book_description": request.form.get("book_description"),
             "book_rating": request.form.get("book_rating"),
-            "is_pdf": is_pdf,
             "book_link": request.form.get("book_link"),
             "book_image": request.form.get("book_image"),
             "created_by": session["user"]
         }
-        mongo.db.tasks.insert_one(book)
+        mongo.db.books.insert_one(book)
         flash("Book uploaded to UniBook!")
-        return redirect(url_for("get_books"))
+        return redirect(url_for("add_book"))
 
     topics = mongo.db.topics.find().sort("topic", 1)
     return render_template("add_book.html", topics=topics)
