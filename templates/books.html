@@ -11,6 +11,17 @@
     </form>
   </div>
 
+  <header>
+    <div>
+      <h2>
+        UniBook Collection:
+      </h2>
+      <p>
+        Simply click on a book to find out more info!
+      </p>
+    </div>
+  </header>
+
   <ul class="collapsible popout">
     {% for book in books %}
     <li>
@@ -31,14 +42,18 @@
             {{ book.sub_topic }}
           </div>
           <div class="col s3">
-            PDF Available!
+          {% if book.is_pdf == "on" %}
+            <i class="far fa-check-circle"></i> PDF Available!
+          {% else %}
+            <i class="far fa-times-circle"></i>No PDF Available!
+          {% endif %}
           </div>
         </div>
       </div>
       <div class="collapsible-body">
         <span><strong>Author:</strong> {{ book.book_author }}</span><br>
         <span><strong>Description:</strong><br> {{ book.book_description }}</span><br>
-        <span><strong>Find the book:</strong> <a href="{{ book.book_link }}">here!</a></span>
+        <span><strong>Find the book:</strong> <a href="{{ book.book_link }}" target="_blank">here!</a></span>
         
       </div>
     </li>
