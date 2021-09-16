@@ -143,7 +143,7 @@ def edit_book(book_id):
         flash("UniBook Collection Item Edited!")
 
     return render_template("edit_book.html", book=book)
-  
+
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
@@ -173,6 +173,7 @@ def add_topic():
 
 @app.route("/edit_topic/<topic_id>", methods=["GET", "POST"])
 def edit_topic(topic_id):
+    topic = mongo.db.topics.find_one({"_id": ObjectId(topic_id)})
     if request.method == "POST":
         submit = {
             "topic_name": request.form.get("topic_name")
@@ -181,14 +182,14 @@ def edit_topic(topic_id):
         flash("Topic Successfully Updated")
         return redirect(url_for("get_topics"))
 
-    category = mongo.db.topics.find_one({"_id": ObjectId(topic_id)})
+    topic = mongo.db.topics.find_one({"_id": ObjectId(topic_id)})
     return render_template("edit_topic.html", topic=topic)
 
 
 @app.route("/delete_topic/<topic_id>")
-def delete_category(topic_id):
+def delete_topic(topic_id):
     mongo.db.topics.remove({"_id": ObjectId(topic_id)})
-    flash("Topic Successfully Deleted")
+    flash("Topic removed from UniBook")
     return redirect(url_for("get_topics"))
 
 

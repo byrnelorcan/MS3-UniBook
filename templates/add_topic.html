@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Add topic</h3>
+
+<div class="row">
+    <form class="col s12" method="POST" action="{{ url_for('add_topic') }}">
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="fas fa-book prefix text-darken"></i>
+          <input id="topic_name" name="topic_name" type="text" class="validate" minlength="2" maxlength="50" required>
+          <label for="topic_name">Topic:</label>
+        </div>
+        
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large waves-effect waves-light" name="action">
+                    Add new topic!
+                </button>
+            </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
