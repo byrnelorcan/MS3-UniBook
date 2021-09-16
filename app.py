@@ -121,6 +121,27 @@ def add_book():
     return render_template("add_book.html", topics=topics)
 
 
+@app.route("/edit_book/<book_id>", methods=["GET", "POST"])
+def edit_book(book_id):
+    if request.method == "POST":
+        submit = {
+            "topic_name": request.form.get("topic_name"),
+            "sub_topic": request.form.get("sub_topic"),
+            "book_name": request.form.get("book_name"),
+            "book_author": request.form.get("book_author"),
+            "book_description": request.form.get("book_description"),
+            "book_rating": request.form.get("book_rating"),
+            "book_link": request.form.get("book_link"),
+            "book_image": request.form.get("book_image"),
+            "created_by": session["user"]
+        }
+        mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
+        flash("UniBook Collection Item Edited!")
+
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template("edit_book.html", book=book)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
