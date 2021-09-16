@@ -45,21 +45,23 @@
                   {{ book.book_name }}
                 </h5>
               </div>
-              <div class="col s9">
-                {{ book.topic_name }}
+              <div class="col s9 book-items">
+                <div class="col s9">
+                  <i class="fas fa-graduation-cap prefix"></i>{{ book.topic_name }}
+                </div>
+                <div class="col s9">
+                  <i class="fas fa-book prefix"></i>{{ book.sub_topic }}
+                </div>
               </div>
               <div class="col s3">
-                <p class="margin">{{ book.book_rating}} / 5</p>
+                <a class="btn-floating btn-large waves-effect waves-light">{{ book.book_rating}} / 5</a>
               </div>
-              <div class="col s9">
-                {{ book.sub_topic }}
-              </div>
-              <div class="col s6">
+              <div class="col s6 find-it-btn">
                 <a href="{{ url_for('edit_book', book_id=book._id) }}" class="waves-effect waves-light btn">Edit this book</a>
               </div>
               
               {% if session.user|lower == book.created_by|lower %}
-              <div class="col s6">
+              <div class="col s6 find-it-btn red">
                 
                 <!-- Modal Trigger -->
                 <a class="waves-effect waves-light btn modal-trigger" data-tooltip="Delete" href="#{{ book._id }}">Delete Entry</a>
