@@ -8,12 +8,12 @@
       <div class="row">
         <div class="input-field col s12">
             <i class="fas fa-book prefix text-darken"></i>
-          <input id="book_name" name="book_name" type="text" class="validate" minlength="5" maxlength="50" required>
+          <input id="book_name" name="book_name" type="text" class="validate" value="{{ book.book_name }}" minlength="5" maxlength="50" required>
           <label for="book_name">Book Title:</label>
         </div>
         <div class="input-field col s12">
             <i class="fas fa-pen prefix text-darken"></i>
-            <input id="book_author" name="book_author" type="text" class="validate" minlength="5" maxlength="50" required>
+            <input id="book_author" name="book_author" type="text" class="validate" value="{{ book.book_author }}" minlength="5" maxlength="50" required>
             <label for="book_author">Book Author:</label>
         </div>
         <div class="input-field col s12">
@@ -30,13 +30,13 @@
         </div>
         <div class="input-field col s12">
             <i class="fas fa-glasses prefix text-darken"></i>
-            <input id="sub_topic" name="sub_topic" type="text" class="validate" minlength="2" maxlength="50" required>
+            <input id="sub_topic" name="sub_topic" type="text" class="validate" value="{{ book.sub_topic }}" minlength="2" maxlength="50" required>
             <label for="sub_topic">Sub Topic:</label>
         </div>
         <div class="input-field col s12">
             <i class="fas fa-star prefix text-darken"></i>
             <select id="book_rating" name="book_rating" class="validate" required>
-              <option value="" disabled selected>How would you rate the book?</option>
+              <option value="{{ book.book_rating }}" selected>How would you rate the book?</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -46,18 +46,18 @@
         </div>
         <div class="input-field col s12">
             <i class="fas fa-shopping-cart prefix text-darken"></i>
-            <input id="book_link" name="book_link" type="text" class="validate" minlength="5" maxlength="50" required>
+            <input id="book_link" name="book_link" type="text" class="validate" minlength="5" value="{{ book.book_link }}" maxlength="50" required>
             <label for="book_link">Link to purchase:</label>
         </div>
         <div class="input-field col s12">
             <i class="far fa-image prefix text-darken"></i>
-            <input id="book_image" name="book_image" type="text" class="validate">
+            <input id="book_image" name="book_image" type="text" value="{{ book.book_image }}" class="validate">
             <label for="book_image">Book Image Link:</label>
             <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
         </div>
         <div class="input-field col s12 materialize-textarea">
             <i class="fas fa-pen prefix text-darken"></i>
-            <input id="book_description" name="book_description" type="text" class="validate" minlength="5" required>
+            <input id="book_description" name="book_description" type="text" class="validate" value="{{ book.book_description }}" minlength="5" required>
             <label for="book_description">Describe the book for everyone at UniBook</label>
         </div>
         <div class="row">
