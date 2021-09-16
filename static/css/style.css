@@ -122,3 +122,23 @@ body {
     flex: 1 0 auto;
   }
 
+  @media screen and (max-width: 550px) {
+      .cover {
+          display: none;
+      }
+
+      .find-it-btn {
+          font-size: small;
+      }
+  }
+
+  @media screen and (max-width:720px) {
+      .book-items {
+          font-size: medium;
+      }
+
+      .books {
+          font-size: large;
+      }
+  }
+
