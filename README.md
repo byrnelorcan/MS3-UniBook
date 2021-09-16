@@ -2,7 +2,7 @@
 
 ## **[View the Live Website Here!]()** ##
 
-![Image]()
+![Image](static/images/mockup.png)
 
 ## **Code Institute Milestone 3 Project - Backend Development**
 
