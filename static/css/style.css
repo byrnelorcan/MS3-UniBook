@@ -20,6 +20,11 @@ nav .brand-logo {
     font-weight: 300;
 }
 
+.intro-paragraph {
+    font-size: larger;
+    font-weight: 300;
+}
+
 .find-it-btn {
     padding-top: 15px;
 }
@@ -37,6 +42,10 @@ nav .brand-logo {
 .search-bar {
     font-size: larger !important;
     font-weight: 300;
+}
+
+.bold {
+    font-weight: 600;
 }
 
 .flashes {

@@ -19,7 +19,7 @@
       <h2>
         UniBook Collection:
       </h2>
-      <p>
+      <p class="intro-paragraph">
         Simply click on a book to find out more info!
       </p>
     </div>
@@ -50,17 +50,15 @@
           <div class="col s3">
             <a class="btn-floating btn-large waves-effect waves-light">{{ book.book_rating}} / 5</a>
           </div>
-          <div class="col s6">
-            <a href="{{ book.book_link }}" target="_blank" class="waves-effect waves-light btn find-it-btn">Find it here!</a>
+          <div class="col s6 find-it-btn">
+            <a href="{{ book.book_link }}" target="_blank" class="waves-effect waves-light btn">Find it here!</a>
           </div>
           
         </div>
       </div>
       <div class="collapsible-body">
-        <span><strong>Author:</strong> {{ book.book_author }}</span><br>
-        <span><strong>Description:</strong><br> {{ book.book_description }}</span><br>
-        <span><strong>Find the book:</strong> <a href="{{ book.book_link }}" target="_blank">here!</a></span>
-        
+            <strong class="bold">Author:</strong> {{ book.book_author }} <br>
+            <span><strong class="bold">Description:</strong><br> {{ book.book_description }}</span><br>
       </div>
     </li>
     {% endfor %}
