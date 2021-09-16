@@ -18,8 +18,8 @@
         </div>
         <div class="input-field col s12">
           <i class="fas fa-graduation-cap prefix text-darken"></i>
-          <select id="topic_name" name="topic_name" class="validate" required>
-            <option value="" disabled selected>Select the main topic field!</option>
+          <select id="topic_name" name="topic_name" class="validate">
+            <option value="" disabled selected>Main topic field already selected!</option>
             {% for topic in topics %}
               <option value="{{ topic.topic_name }}">{{ topic.topic_name }}</option>
             {% endfor %}
