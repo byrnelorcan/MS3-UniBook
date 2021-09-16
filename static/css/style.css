@@ -15,8 +15,9 @@ nav .brand-logo {
 }
 
 .book-items {
-    padding: 10px;
+    padding: 10px !important;
     font-size: larger;
+    font-weight: 300;
 }
 
 .find-it-btn {
@@ -34,7 +35,7 @@ nav .brand-logo {
 }
 
 .search-bar {
-    font-size: larger;
+    font-size: larger !important;
     font-weight: 300;
 }
 
