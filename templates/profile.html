@@ -8,24 +8,22 @@
       <div class="card-panel">
         {% for detail in details %}
         
-        <h2>
+        <h2 class="profile-header">
             Welcome {{ detail.username }}! <br>
         </h2>
         <h4>
             {{ detail.firstname }} {{ detail.lastname }}
         </h4>
-        <h5>
-            <p><strong>Course of study:</strong> {{ detail.course }}</p>
-            <p><strong>University:</strong> {{ detail.university }}</p>
+        <h5 class="profile-header">
+            <p><i class="fas fa-book prefix"></i> {{ detail.course }}</p>
+            <p><i class="fas fa-user-graduate prefix"></i> {{ detail.university }}</p>
         </h5>
         
         {% endfor %}
       </div>
-      <div>
-        <a href="{{ url_for('add_book') }}">Add a new book here!</a>
-      </div>
+      
 
-      <h4>
+      <h4 class="profile-header">
         Your UniBook Additions:
       </h4>
 
@@ -61,10 +59,10 @@
               </div>
               
               {% if session.user|lower == book.created_by|lower %}
-              <div class="col s6 find-it-btn red">
+              <div class="col s6 find-it-btn">
                 
                 <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn modal-trigger" data-tooltip="Delete" href="#{{ book._id }}">Delete Entry</a>
+                <a class="waves-effect waves-light btn modal-trigger red darken-2" data-tooltip="Delete" href="#{{ book._id }}">Delete Entry</a>
                 
                 <!-- Modal Structure -->
                 <div id="{{ book._id }}" class="modal">

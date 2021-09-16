@@ -26,7 +26,7 @@ nav .brand-logo {
 }
 
 .find-it-btn {
-    padding-top: 15px;
+    padding-top: 15px !important;
 }
 
 .btn {
@@ -55,6 +55,10 @@ nav .brand-logo {
     overflow: hidden; 
     margin: 0;
     
+}
+
+.profile-header {
+    font-weight: 300;
 }
 
 /* http://jsfiddle.net/jstol/wZYty/ */
