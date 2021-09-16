@@ -7,7 +7,7 @@
       <div class="input-field col s12">
         <i class="fas fa-search prefix"></i>
         <input type="text" name="query" id="query" required>
-        <label for="query">Search UniBook collection!</label>
+        <label for="query" class="search-bar">Search UniBook collection!</label>
       </div>
 
       
@@ -39,14 +39,16 @@
               {{ book.book_name }}
             </h5>
           </div>
-          <div class="col s9">
-            {{ book.topic_name }}
+          <div class="col s9 book-items">
+            <div class="col s9">
+              <i class="fas fa-graduation-cap prefix"></i>{{ book.topic_name }}
+            </div>
+            <div class="col s9">
+              <i class="fas fa-book prefix"></i>{{ book.sub_topic }}
+            </div>
           </div>
           <div class="col s3">
-            <p class="margin">{{ book.book_rating}} / 5</p>
-          </div>
-          <div class="col s9">
-            {{ book.sub_topic }}
+            <a class="btn-floating btn-large waves-effect waves-light">{{ book.book_rating}} / 5</a>
           </div>
           <div class="col s6">
             <a href="{{ book.book_link }}" target="_blank" class="waves-effect waves-light btn">Find it here!</a>

@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.font {
+    font-family: 'Lato', sans-serif;
+}
+
+nav .brand-logo {
+    padding-left: 10px;
+}
+
+.nav-items {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: large;
+}
+
+.book-items {
+    padding: 10px;
+    font-size: larger;
+}
+
+.find-it-btn {
+    padding-top: 15px;
+}
+
+.btn {
+    font-weight: 300; 
+}
+
+.btn-floating {
+    font-size: large;
+    font-weight: 300;
+    background-color: cadetblue;
+}
+
+.search-bar {
+    font-size: larger;
+    font-weight: 300;
+}
+
 .flashes {
     background-color: yellow;
     text-align: center;
