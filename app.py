@@ -87,7 +87,10 @@ def profile(username):
     if session["user"].lower() == username.lower():
         user = mongo.db.users.find_one({"username": username})
         details = list(mongo.db.users.find({"username": username}))
-        return render_template("profile.html", user=user, details=details)
+        books = list(mongo.db.books.find({"created_by": username}))
+        collection = list(mongo.db.collected.find({"created_by": username}))
+        return render_template("profile.html", user=user, 
+                                details=details, books=books, collecton=collection)
 
     return redirect(url_for("login"))
 
@@ -123,6 +126,7 @@ def add_book():
 
 @app.route("/edit_book/<book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
+    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     if request.method == "POST":
         submit = {
             "topic_name": request.form.get("topic_name"),
@@ -138,7 +142,6 @@ def edit_book(book_id):
         mongo.db.books.update({"_id": ObjectId(book_id)}, submit)
         flash("UniBook Collection Item Edited!")
 
-    book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     return render_template("edit_book.html", book=book)
 
 
