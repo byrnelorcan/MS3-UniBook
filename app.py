@@ -143,12 +143,53 @@ def edit_book(book_id):
         flash("UniBook Collection Item Edited!")
 
     return render_template("edit_book.html", book=book)
+  
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
     mongo.db.books.remove({"_id": ObjectId(book_id)})
     flash("Book removed from UniBook")
     return redirect(url_for("get_books"))
+
+
+@app.route("/get_topics")
+def get_topics():
+    topics = list(mongo.db.topics.find().sort("topic_name", 1))
+    return render_template("topics.html", topics=topics)
+
+
+@app.route("/add_topic", methods=["GET", "POST"])
+def add_topic():
+    if request.method == "POST":
+        topic = {
+            "topic_name": request.form.get("topic_name")
+        }
+        mongo.db.topics.insert_one(topic)
+        flash("New Topic Added")
+        return redirect(url_for("get_topics"))
+
+    return render_template("add_topic.html")
+
+
+@app.route("/edit_topic/<topic_id>", methods=["GET", "POST"])
+def edit_topic(topic_id):
+    if request.method == "POST":
+        submit = {
+            "topic_name": request.form.get("topic_name")
+        }
+        mongo.db.topics.update({"_id": ObjectId(topic_id)}, submit)
+        flash("Topic Successfully Updated")
+        return redirect(url_for("get_topics"))
+
+    category = mongo.db.topics.find_one({"_id": ObjectId(topic_id)})
+    return render_template("edit_topic.html", topic=topic)
+
+
+@app.route("/delete_topic/<topic_id>")
+def delete_category(topic_id):
+    mongo.db.topics.remove({"_id": ObjectId(topic_id)})
+    flash("Topic Successfully Deleted")
+    return redirect(url_for("get_topics"))
 
 
 if __name__ == "__main__":

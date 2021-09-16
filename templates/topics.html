@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Edit Topics</h3>
+
+<div class="row">
+    {% for topic in topics %}
+        <div class="col s12 m3">
+        <div class="card blue-grey darken-4 center-align">
+            <div class="card-content white-text">
+                <span class="card-title">{{ topic.topic_name }}</span>
+            </div>
+            <div class="card-action">
+            <a href="#" class="waves-effect waves-light btn">Delete</a>
+            <a href="#" class="waves-effect waves-light btn">Edit</a>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}
