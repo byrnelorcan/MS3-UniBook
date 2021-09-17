@@ -5,7 +5,9 @@
 ![Image](static/images/mockup.png)
 
 ## **Code Institute Milestone 3 Project - Backend Development**
+The project has been undertaken to build an efficient, simple and accessible book collection website. The site will enable University students, graduates and staff to search through different topics, add books to the sites collection, own a profile and have access links to purchase books. 
 
+The site will feature a log in and register function where the user will gain the ability to add books to their collection and leave a review and score rating. The site willbe in the most simple format possible has been designed to not overwhelm the user with information.
 
 
 
