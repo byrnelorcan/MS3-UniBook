@@ -224,19 +224,21 @@ A number of code validation techniques were utilised to ensure proper testing of
 For HTML and CSS, I used the [W3C Markup Validator](https://validator.w3.org) and [W3C CSS Validation Services](https://jigsaw.w3.org/css-validator/). 
 See below for results.
 
-- [HTML Test]() - A warning 
-- [CSS Test]() - No errors return from CSS test.
+- HTML: A warning for Jinja template language. No other errors.
+- CSS: A warning for auto setting on height. No fix required. 
 
-A Chrome Developer Tools "Lighthouse" Test was aslo completed to test for accessibility and performance. 
-The results are seen below. The site scored well in all aspects of performance and userability. 
-
-![Image]()
 
 ## Javascript
 --------------
 A combination of [JSHint](https://jshint.com/) and manual testing was completed on the javascript to ensure adequate quality. 
-- No errors returned for JSHint.
-- 
+- Firefox warning from JSHint. No fix required
+- No errors found in manual test. JQuery from materialize used and functioned well.
+
+## Python
+--------------
+[PEP8 Online]() used to test Python. 
+
+- Over indentation found but was unable to fix.
 
 ## Responsive Elements 
 --------------
@@ -245,11 +247,8 @@ The responsivity of the page was tested primarily using [Google Chrome Dev Tools
 device option. The responsive breakpoints and resizing worked throughout the site. The site was shared with colleagues and friends and tested 
 on their devices. The site worked well on all devices tested and there was no problem with browser compatibility found during these tests.
 
-Other tools utilised to test responsivity are seen here:
-- [Screenfly](https://bluetree.ai/screenfly/) - [Result]()
-- [Responsinator](http://www.responsinator.com) - [Result]()
   
-## Data Accuracy
+## Search Accuracy and Functionality
 --------------
 Manual testing was completed 
 
@@ -261,14 +260,32 @@ Manual testing was completed
 --------------
 The user stories previously laid out in the UX Design section are tested, to ensure that project achieves the user goals.
 
+
 __Applicable to all users__
-- *As a user, I would like to understand the purpose of the website on landing on the page.*
-  - 
+- *As a user, I would like to easily navigate and understand the site on landing.*
+  - The landing page is clear and nav bar displays all relevant links.
+- *As a user, I require a link to purchase the books.*
+  - A link to purchase books is available for each book card.
+- *As a user, the ability to log in and register is important.*
+  - The user has the ability to log in and register.
+- *As a user, I would like to be able to rate and review books, and add them to the site collection.*
+  - The user can add a number rating out of 5 and a detailed decription of the book for other users.
+- *As a user, I need to be able to search the collection for different topics.*
+  - The user has a search functionality available.
+
+__General user__
+- *As a general user, I require to be able to view and use elements of the site without logging in.*
+  - The user does not need to be logged in to use the main element of the site. The user can search and follow links to purchase without registering.
+- *As a general user, I would like to still have the option to follow the link to buy without registering an account.*
+  - The user can follow the purchase link from the landing page.
+
+__Admin Users__
+- *As an admin, I require the ability to edit and delete topics and books.*
+  - The admin has the key functions required to edit, delete or add any book on the database.
+- *As an admin, I need to access the books quickly with direct links to edit and delete functions.*
+ - The admin can easily access any book from the landing page or the admin profile page for uploads the admin has made. 
 
 
-## Bugs and Fixes 
---------------
-- 
 
 # Deployment 
 

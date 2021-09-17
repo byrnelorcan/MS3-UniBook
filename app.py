@@ -85,7 +85,7 @@ def login():
             # no username found
             flash("Oops! Thats the wrong Username or Password!")
             return redirect(url_for("login"))
-    
+  
     return render_template("login.html")
 
 
@@ -96,8 +96,9 @@ def profile(username):
         details = list(mongo.db.users.find({"username": username}))
         books = list(mongo.db.books.find({"created_by": username}))
         collection = list(mongo.db.collected.find({"created_by": username}))
-        return render_template("profile.html", user=user, 
-                                details=details, books=books, collecton=collection)
+        return render_template("profile.html", user=user,
+                                details=details, books=books, 
+                                collecton=collection)
 
     return redirect(url_for("login"))
 
