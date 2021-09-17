@@ -50,16 +50,22 @@ The site will feature a log in and register function where the user will gain th
 # **UX**
 ## User Stories
 ----------------
-
+In this project there are three groups of target users. They include university students, the admin and site owner and general users. The user stories for eac group are defined below.
 
 __Applicable to all users__
-- As a user, 
+- As a user, I would like to easily navigate and understand the site on landing.
+- As a user, I require a link to purchase the books.
+- As a user, the ability to log in and register is important.
+- As a user, I would like to be able to rate and review books, and add them to the site collection.
+- As a user, I need to be able to search the collection for different topics.
 
 __General user__
-- As a general user, 
+- As a general user, I require to be able to view and use elements of the site without logging in.
+- As a general user, I would like to still have the option to follow the link to buy without registering an account.
 
-__Returning Users__
-- As a returning user, 
+__Admin Users__
+- As an admin, I require the ability to edit and delete topics and books. 
+- As an admin, 
 
 
 ## Strategy
