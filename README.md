@@ -24,7 +24,7 @@ The site will feature a log in and register function where the user will gain th
 - [**Features**](#--features--)
   * [1. Landing Page](#1-landing-page)
   * [2. Profile Page](#2-profile-page)
-  * [3. Logi and Book Features](#3-login-and-book-features)
+  * [3. Login and Book Features](#3-login-and-book-features)
 - [**Technologies**](#--technologies--)
   * [Languages](#languages)
   * [Libraries, Frameworks and Technologies](#libraries--frameworks-and-technologies)
