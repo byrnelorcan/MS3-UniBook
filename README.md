@@ -168,11 +168,15 @@ The profile page features a welcome element and displays the users fields of stu
 ![Image](static/images/profile.png)
 
 ---------------------
-## 3. Login Features
+## 3. Login and Book Features
 ---------------------
 The login page is simple and displays prompts for the user to input their username and password. The site also features a link to register if the user has not yet done so.
 
 ![Image](static/images/login.png)
+
+The add book page is a simple form with user prompts to input the required format. There is defensive programming employed to ensure the user does not input information in the wrong format. The user can add the purchase link and also can replace the image link if they can find an image url for their chosen book.
+
+![Image](static/images/book.png)
 
 
 # **Technologies**
@@ -182,19 +186,16 @@ For this project two languages were used:
 - [HTML](https://www.w3schools.com/html/#:~:text=HTML%20is%20the%20standard%20markup,learn%20%2D%20You%20will%20enjoy%20it!)
 - [CSS](https://www.w3schools.com/css/)
 - [Javascript](https://www.javascript.com/)
+- [Python](https://www.python.org/)
 
 ## Libraries, Frameworks and Technologies
 ---------------
 
 -
 
-- [Bootstrap](https://getbootstrap.com/) - Bootstrap was used to for its wasy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the Bootstrap V5.0 CDN.
-
-- [Figma](https://www.figma.com/) - Figma was used to create initial design and wireframes for different breakpoints.
+- [Materialize](https://materializecss.com/) - Materialize was used to for its wasy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the site.
 
 - [Coolors](https://coolors.co) - Used to create colour palette and test colour themes.
-
-- [Unsplash](https://unsplash.com/) - Used to source high quality images.
 
 - [Google Fonts](https://fonts.google.com/) - Google font 'Lato' was included in the project.
 
@@ -202,11 +203,13 @@ For this project two languages were used:
 
 - [JQuery](https://jquery.com/) - Used for aspects of userability.
 
-- 
-
-- 
+- [MongoDB](https://www.mongodb.com/) - Used for the database.
 
 - [Mock-Up Generator](https://techsini.com/multi-mockup/index.php) - Used for title photo.
+
+- [Heroku](https://id.heroku.com/login) - Used for site deployment.
+
+- Werkzeug, PyMongo, Jinja and Flask - Frameworks used for templates, web application libraries and tooling for database link up.
 
 ## Workspace and Version Control
 --------------------
@@ -250,7 +253,9 @@ Other tools utilised to test responsivity are seen here:
 --------------
 Manual testing was completed 
 
-These tests were completed by comparing data from reputable trusted [sources](https://www.aviationweather.gov/metar) and the data displayed via the [Check WX API]().
+- The search function worked well.
+- The add, edit and delete functions completed their required tasks and were easy to use.
+- The login and register functions were tested and performed well.
 
 ## UX User Story Test
 --------------
