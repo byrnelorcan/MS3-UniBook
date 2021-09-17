@@ -65,77 +65,85 @@ __General user__
 
 __Admin Users__
 - As an admin, I require the ability to edit and delete topics and books. 
-- As an admin, 
+- As an admin, I need to access the books quickly with direct links to edit and delete functions. 
 
 
 ## Strategy
 ----------------
 __Project goals__
 
-The aim of this project is present  in a simple and clear but professional way. It was important to create a user-friendly and approachable site with a modern design and feel. The critical data had to be presented to the user in a way that they are familar with. This in-effect makes the site very accessible to people who understand  
+The aim of this project is present  in a simple and clear but professional way. It was important to create a user-friendly and approachable site with a modern design and feel. The book collection had to be presented to the user in a way that they can quickly decipher the main topic area and then the more focused sub topic. This makes the site more accessible to users who are studying and need to find information quickly.
 
-The content of the site therefore had to include;
-- This
-- 
+The features and content of the site therefore had to include;
+- Book titles, authors and descriptions.
+- Common topics of University study along with sub-topics of interest. For example, Science and Physics.
 
-Additionally content that may be of use is;
-- The 
-- An 
 
 __User goals__ 
 
-The user goals will be met by enabling the user get access to the required data in a clear and concise format. The users require key data and an efficient user experience. The users goals will be achieved through a basic structure . 
+The user goals will be met by enabling the user get access to the collection in a clear and concise format. The users require the ability to quickly search for their topic and filter out the irrelevant information. The users goals will be achieved through a landing page featuring a basic structure of cards with book information and a linked image. There will also be links to log in and register. 
 
-__Research__
-
-Through prior experience 
 
 
 ## Scope 
 ----------------
 
-- 
+The site will be built for purpose and the content should be accesible and user friendly. The scope therefore includes:
+- A landing page featuring books with title images and relevant topics clearly displayed.
+- An ability to search from the landing page.
+- A log in function where the user inputs username and password.
+- A register function, the user will input relevant details and create a profile.
+- A profile page, displaying the books the user had added to the collection.
+- An ability to follow a link to purchase any book on the site through amazon.
 
 
 
 ## Structure
 ----------------
 
+The structure of the site is built around the main landing page where the user can see all the books in the collection and search through them.
 
 
 1. **Landing Page**
-- Simple landing page, with solid block colour hero-image featuring an
-2. **Briefing Page**
-- This section is the key dashboard that enables the user to search for their 
-
+- Simple landing page, with a search bar and simple cards showing the book title, and topics with a cover image. 
+- The cards will also feature the user rating out of 5.
+- The cards are interactive and when clicked will reveal author and a brief description of the book. 
+2. **Log In/Register Page**
+- This page enables the user to input a username and password.
+- The page will link to a register page where the user can input name and study topic.
+3. **Profile Page**
+- This page displays the user profile with their username and their study topics.
+- The books the user has added will be displayed along with an option to edit or delete the entries.
+4. **Add Book Page**
+- This page is directly linked in the nav bar and enables the user to add a book to the collection.
+- Consists of a simple form to fill out along with descriptions and the ability to add a purchase link.
 
 ## Skeleton 
 ----------------
 ### **Wireframes** ###
 
-The Skeleton of the project design was built utilising [Figma](https://www.figma.com/design-systems/). 
+The Skeleton of the project design was built utilising [Balsamiq](https://balsamiq.com/). 
 
 The overall basic design breakpoints can be seen below:
 
-![Image]()
+![Wireframes](static/images/wireframe.png)
 
-The individual wireframes can be seen by following the links below:
-- [xs]()
-- [md]()
-- [xl]()
 
 ### **Changes to initial wireframes** ###
 A number of design edits were made throughout the project with the purpose of increased userability and clarity. These include:
-- The 
+- The navbar will be consistent throughout the pages.
+- The form field will feature a clearer more concise design with prompts.
+- The elements will be softer on the background and will not be large block features as seen above. 
+- The elements will have clear icons for user experience.
  
 
 ## Surface 
 ----------------
-The site aimed to be bright, clear and simple. The colour choice was to be light so that nothing distracts from the key data and information. 
+The site aimed to be bright, clear and simple. The colour choice was to be light so that nothing distracts from the key data and information. The light will be contrasted with dark green nav and footer elements.
 
 **Colour Theme**
 
-![Image]()
+![Image](static/images/colours.png)
 
 **Typography**
 
@@ -148,31 +156,23 @@ The site also has 'Sans Serif' as an alternative font.
 ----------------
 ## 1. Landing Page
 -----------------
-The landing page features high-quality large solid block image with an 
+The landing page features a responsive card list of all books on the site. The page features a search bar to enable users to search through the collection. The feel of the site is light. The site navigation is clear and consistent with standard practice. Links to purchase the books are clearly visible with the user rating featured too.
 
-![Image]()
+![Image](static/images/landing.png)
 
 ----------------------
-## 2. Briefing Page
+## 2. Profile Page
 ----------------------
-The Briefing page opens 
+The profile page features a welcome element and displays the users fields of study along with the University they study in. The book additions that the user has made to the site are clearly diplayed on the profile. There are options fir the user to edit their collection and delete an entry they have made if required.
 
-![Image]()
+![Image](static/images/profile.png)
 
-The 'How to use" opens a modal that enables the user to learn more about the relevant terminology. The modal also reiterates what an ICAO code is and shows some examples for unfamiliar users. The site links to relevant pages for further reading. 
+---------------------
+## 3. Login Features
+---------------------
+The login page is simple and displays prompts for the user to input their username and password. The site also features a link to register if the user has not yet done so.
 
-![Image]()
-
-
-
-## 3. Future Features
-Future features that could be implemented include:
-- A nearby aerodrome locator.
-- Specific airport brief detailing runway details and air traffic control frequencies.
-- An overlayed map showing route options.
-- A point to point briefing, showing weather along the route.
-
-I believe that given my limited knowledge of languages used and the given scope of the project, it was justified to not pursue implementing the aforementioned features.
+![Image](static/images/login.png)
 
 
 # **Technologies**
