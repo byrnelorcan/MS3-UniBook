@@ -1,6 +1,6 @@
 # **UniBook**
 
-## **[View the Live Website Here!]()** ##
+## **[View the Live Website Here!](https://uni-book-ms3-project.herokuapp.com/)** ##
 
 ![Image](static/images/mockup.png)
 
@@ -180,6 +180,14 @@ The add book page is a simple form with user prompts to input the required forma
 
 
 # **Technologies**
+## Database
+---------------
+The database used was mongoDB. The data structure can be seen below:
+
+![Image](static/images/database.png)
+
+The content is broken down in clear descriptions with text inputs from the forms. The image and we links are stored as plain text. The naming convention was kept concise and relevant to the site.
+
 ## Languages
 ---------------
 For this project two languages were used:
@@ -190,8 +198,6 @@ For this project two languages were used:
 
 ## Libraries, Frameworks and Technologies
 ---------------
-
--
 
 - [Materialize](https://materializecss.com/) - Materialize was used to for its wasy to use grid and repsonsive layout. Elelments of the navbar, cards and forms were taken from the site.
 
@@ -250,7 +256,7 @@ on their devices. The site worked well on all devices tested and there was no pr
   
 ## Search Accuracy and Functionality
 --------------
-Manual testing was completed 
+Manual testing was completed and the following results were found:
 
 - The search function worked well.
 - The add, edit and delete functions completed their required tasks and were easy to use.
@@ -310,24 +316,29 @@ To create a fork of the Repository simply:
 
 For more specific information relating to the clone follow this [link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-## Using the sites API functions:
-- [
-  - 
+## Heroku Deployment:
+This project is deployed using Heroku.
+
+- Log in or create a profile on Heroku. Select and create a new app, select the correct region and click “Create App”.
+- Select “Deploy” tab and “Deployment method” section. Click on GitHub.
+- Search for the repository, and click “Connect” next to the project repository.
+- Next, select the “Settings” tab, and scroll down to “Config Vars”.
+- Enter the Key and Value pairs as per your env file;
+- Go back to the “Deploy” tab, and scroll down to “Automatic deploys”. Select “Enable Automatic Deploys” then “Deploy Branch”.
+- The app will be built over a few minutes.
+- You can now click on “Open App” which will launch the deployed app.
 
 
 # **Credits**
 ## Content
 --------------
- -
+ - The Code Institute walkthrough project for backend development.
+ - The structure of the site from materialize CSS.
 
 ## Media 
 --------------
-The images via [Unsplash](https://unsplash.com/) used on the site are credited below:
-   - Photo of landing page 
-
-All icons were sourced from [font awesome](https://fontawesome.com/)
+- All icons were sourced from [font awesome](https://fontawesome.com/)
 
 ## Acknowledgements
---------------
-Thanks to my family and friends who devoted their time to test the page and proof-read over text. 
+-------------- 
 Thanks to the [Code Institute](https://codeinstitute.net) for the tutorials and resources. 
