@@ -1,3 +1,9 @@
+"""
+PLEASE SEE!: Code structure from the Code Institute Walkthrough Task Manager Project. 
+Code is edited for the purpose of this project
+"""
+
+
 import os
 from flask import (
     Flask, flash, render_template, 
